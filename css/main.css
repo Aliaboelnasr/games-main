@@ -1,0 +1,211 @@
+:root{
+    --main-color:#272B30;
+    --navBar-color:#3A497B;
+    --white-color: white;
+    --active-color:#09c;
+    --fff-color:#fff;
+}
+
+body{
+    font-family: cursive ;
+    background-color: var(--main-color);
+    box-sizing: border-box;
+}
+
+/*^start loader */
+.loading{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.476);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999999;
+}
+.loader{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-top: 3px solid var(--fff-color);
+    animation: rotation 1s linear infinite;
+}
+.loader::after{
+    position: absolute;
+    content: '';
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    border-bottom: 3px solid #FF3D00;
+    animation: rotation 0.5s linear infinite reverse;
+
+}
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 
+
+/* ^end loader */
+
+/* &start Home */
+.bg-img img{
+    max-height: 40vh;
+    object-fit: cover;
+}
+.logo-nav{
+    img{  
+        width: 40px;
+    }
+    .navbar-brand{
+        font-size: 1.25rem;
+        color: var(--fff-color);
+        font-weight: 500;
+    }
+}
+
+.navbar-toggler {
+    background: none;
+    border: 2px solid transparent; 
+    color: white; 
+    padding: 10px; 
+    border-radius: 40px;
+    transition: all 0.3s ease; 
+}
+
+
+.navbar-toggler:hover, .navbar-toggler:focus {
+    border: 2px solid #009ad8; 
+    outline: none; 
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.nav-item .nav-link{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--fff-color);
+    transition: 0.5s ease color;
+}
+nav.navbar{
+    margin-top:-40px ;
+    position: sticky;
+    top: -8px;
+    z-index: 100;
+    background-color: transparent;
+}
+
+nav.navbar  .container {
+    background-color: var(--navBar-color);
+    padding: 0.6rem;
+    border-radius: 1.2rem;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 0px 10px 0px;
+}
+nav.navbar .nav-link.active{
+    color: var(--active-color);
+}
+
+nav.navbar .nav-link:hover{
+    color: var(--active-color);
+}
+/* &end Home */
+
+/* ^cards */
+.card-title {
+    margin-bottom: 10px;
+        h5{
+            color: white;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        .badge{
+            padding: 0.5rem !important;
+            background-color: #4A6792 !important;
+        }
+    }
+    .card-text{
+        color: rgba(255, 255, 255, 0.5);
+        font-size: .7rem;
+        font-weight: 400;
+    }
+    
+    .footer-badge{
+        background-color:#32383E ;
+        font-size: .6rem;
+    }
+    
+    .card-img , .card-title span{
+        filter: grayscale(70%);
+        transition: filter .5s ;
+    }
+    
+    
+    .card{
+        cursor: pointer;
+        transition: transform .5s;
+        aspect-ratio: 3/3.1;
+    
+        &:hover{  
+            .card-img , .card-title span{
+                filter: grayscale(0%);
+                
+            }
+            transform: scale(1.05);
+        } 
+    }
+/* ^end cards */
+
+/* &start game details */
+.game-details{
+    background-color: #27282B;
+    min-height: 100vh;
+
+}
+.game-details-header {
+    h2{  
+        font-size: 1.6rem;
+        color: var(--white-color);
+        font-weight: 500;
+    }
+
+    i{
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+
+        &:hover{
+        color: white;
+        }
+    }
+}
+
+.game-title {
+    font-size: 1.2rem;
+    color: var(--white-color);
+    font-weight: 500;
+}
+.game{
+    font-size: 1rem;
+    font-weight: 400;
+    color: white;
+
+    span{
+        background-color:#0DCAF0 ;
+        color: black;
+    }
+}
+
+.game-description{
+    font-size: 0.88rem !important;
+    line-height: 2;
+}
+.game-link{
+    padding: 0.2rem 0.75rem;
+}
+
+/* &end games details */

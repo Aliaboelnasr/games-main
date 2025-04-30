@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ^Links -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <!-- ^Links -->
+    <title>Games</title>
+</head>
+
+<body>
+    <div class="loading d-none">
+        <span class="loader"></span>
+    </div>
+
+    <section class="Home" id="home">
+        <div class="bg-img">
+            <img src="./images/wraper.png" alt="" class="w-100">
+        </div>
+
+        <nav class="navbar navbar-expand-lg col-md-6 col-lg-9 mx-auto">
+            <div class="container">
+                <div class="logo-nav d-flex align-items-center">
+                    <img src="./images/logo-sm.png" alt="">
+                    <a class="navbar-brand ps-2 text-uppercase" href="#">Game Reviews</a>
+                </div>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase active" aria-current="page" href="#">mmorpg</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">shooter</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">sailing</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">permadeath</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">superhero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" href="#">pixel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="games-list mt-3">
+            <div class="container">
+                <div class="row g-4" id="games">
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="game-details  d-none pt-3" id="game-details">
+        <div class="container">
+            <div class="game-details-header d-flex justify-content-between align-items-center mb-4">
+                <h2>Details Game</h2>
+                <i class="fa-solid fa-xmark" id="close-game-details"></i>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-details w-100" src="" alt="thumbnail">
+                </div>
+                <div class="col-md-8 mt-3 mt-md-0">
+                    <h3 class="game-title">Title: </h3>
+                    <h4 class="game mb-3 mt-3 game-category">category: <span class="badge"></span> </h4>
+                    <h4 class="game mb-3 game-platform">Platform: <span class="badge"></span> </h4>
+                    <h4 class="game mb-3 game-Status">Status: <span class="badge"></span> </h4>
+                    <p class="text-white game-description"></p>
+
+                    <a href="game-link" target="_blank" class="game-link btn btn-outline-warning text-white">Show
+                        More</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>
